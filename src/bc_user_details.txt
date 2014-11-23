@@ -1,0 +1,6 @@
+santosh,parida,sanparid,sanparid,Admin,24-06-2014,sanparid@in.ibm.com
+Rakesh,Tiwari,rakeshti,itsAllBlue,MIS,15-06-2014,rakesh.ti@in.ibm.com
+aditi,kumari,aditi,aditi,MIS,25-06-2014,adkumar8@in.ibm.com
+Anirban,Aditya,Anirban,myblueWorld,Normal,20-06-2014,anirban.ad@in.ibm.com
+Avijit,Dey,Avijit,Avijit,Normal,17-06-2014,avijitdey1@in.ibm.com
+Rakesh,Tiwari,rakesh,rakesh,admin,7654324587,02-07-2014,Rakh@gmail.com

@@ -1,0 +1,5 @@
+01,Abhijit,9862012435,credit,762136547001,13-05-2014,Thank you for Shopping at ReliancePetroleum!! We hope to see you again.,500,A,abhidey1@in.ibm.com
+02,Santosh,9600206612,credit,985678653264,20-04-2013,Thank you for shopping at Fabfurnish!!We hope to serve you again.,9200,A,sanparid@in.ibm.com
+03,Rakesh,9507216452,Debit,890784326259,17-03-2014,Thank you for shopping at Flipkart!!We hope to serve you again.,20000,B,rakeshti@in.ibm.com
+04,Aditi,7890123465,Debit,764587432589,26-04-2014,Thank you for shopping at Amazon.com!,5000,C,adkumar@in.ibm.com
+05,Ruma,7890123465,Debit,984587432589,17-07-2014,Thank you for shopping at Flipkart!!We hope to serve you again.,5000,C,rumapal@in.ibm.com

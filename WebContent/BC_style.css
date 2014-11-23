@@ -1,0 +1,260 @@
+/*<!--
+#!/usr/bin/perl
+# @(#) $Id: WMC_style.css,v 1.1.1.1.6.2.6.2.12.2 2007/12/17 10:09:33 shouvik Exp $
+
+########################################################
+# WCME_style.css
+#
+# COPYRIGHT
+# Copyright (C)  2002 Wirefree Innovision Technologies, All rights reserved.
+# No part of this computer program may be used or reproduced in any form by
+# any means without prior written permission of Wirefree Innovision Technologies P Ltd
+#
+#
+# DESCRIPTION
+# Project : WCME
+#  This contains the style sheet for the product
+#
+# Originated : , Shouvik Kar - 15-06-04.
+############################################################
+ -->
+*/
+.template {
+        font-family: Verdana, Arial;
+        font-size: 11px;
+        /*color: black;*/
+        color:black;
+}
+
+.tableHead {
+        font-family: Verdana, Arial;
+        font-size: 11px;
+        font-weight:bold;
+        color: white;
+        text-align: center;
+        /*background:#336699;*/
+        background:#1586C7;
+}
+.commTable {
+        font-family: Verdana, Arial;
+        font-size: 10px;
+        font-weight:bold;
+        color: Black;
+        text-align: center;
+        background: #c3c3c3;
+}
+
+.toplink {
+        font-family: Verdana, Arial;
+        font-size: 11px;
+        font-weight:bold;
+        color: white;
+        text-align: center;
+        background:#0A6DA6;
+}
+.templateCopy {
+        font-family: Verdana, Arial;
+        font-size:10px;
+        color: white;
+        /*color: #959595;*/
+        text-align: center;
+}
+
+.pathType {
+        font-family: Verdana, Arial;
+        font-size:11px;
+        /*color: #336699;*/
+        color: white;
+        font: normal;
+        font-weight:bold;
+	/*background:#0A6DA6;*/
+	background:#1586C7;
+        text: bold;
+}
+
+.siteMap {
+        font-family: Verdana, Arial;
+        font-size:11px;
+        /*color: #336699;*/
+        color: white;
+        font: normal;
+        font-weight:bold;
+	/*background:#0A6DA6;*/
+	background:#6ccfff;
+        text: bold;
+}
+.heading {
+        font-family: Verdana, Arial;
+        font-size:11px;
+        /*color: #336699;*/
+        color: #959595;
+        text-align: justify;
+        font-weight:bold;
+        text-decoration:underline;
+}
+
+.inputs {
+        font-family: Verdana, Arial;
+        font-size: 11px;
+        color: black;
+        text-align: justify;
+}
+
+Body {
+        font-family: Verdana, Arial;
+        color: black;
+	font-size: 11px;
+}
+A  {
+        color : white;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+A.active  {
+        color : white;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+A.visited  {
+        color : white;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+A:Hover  {
+        color : #a5b4dc;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+A.link  {
+        color : blue;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+
+A.body  {
+        color : #008040;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+A.active.body  {
+        color : #008040;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+A.visited.body  {
+        color : #008040;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+A:Hover.body  {
+        color : #ccf7f7;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+A.template  {
+        color : blue;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+
+A.active.template  {
+        color : blue;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+A.visited.template  {
+        color : blue;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+A:Hover.template  {
+        color : red;
+        font-family: Verdana, Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+
+.path {
+        font-family: Verdana, Arial;
+        font-size: 12px;
+        font-weight:bold;
+        color : white;
+}
+
+.bttn {
+        font-family: Verdana, Arial;
+        font-size: 11px;
+        font-weight:bold;
+        color : white;
+        /*background : #336699;*/
+        background :#0A6DA6;
+}
+
+.cols {
+        font-family: Verdana,Arial;
+        font-size: 11px;
+        text-align: center;
+        /*color: black;*/
+        color: #959595;
+}
+
+.tabHref {
+        /*color : #336699;*/
+        color : #959595;
+        font-family: Verdana,Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+.footer {
+        font-family: Verdana, Arial;
+        font-size: 10px;
+        color: #959595;
+        }
+.MisHeading {
+        color : Black;
+        font-family: Verdana,Arial;
+        text-decoration : none;
+        font-size: 11px;
+        font-weight:bold;
+}
+
+b.Error{
+	color : Red;
+        font-family: Verdana,Arial;
+        text-decoration : none;
+        font-size: 11px;
+        
+}
+b.Success{
+        color : Green;
+        font-family: Verdana,Arial;
+        text-decoration : none;
+        font-size: 11px;
+
+}

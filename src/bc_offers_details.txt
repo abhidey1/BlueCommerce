@@ -1,0 +1,4 @@
+00101,BANGALORE,TheOberoi,TheCapitol,AmpleInn,HRGlobal,MeeruCab,
+00102,DELHI,TajPalace,MappleEmerald,HotelSage,AirBorneAcademy,IIMSDetectives
+00103,MUMBAI,GrandHyatt,TheOrchid,ApolloHotel,EagleTravels,ShreeToursandTravels
+00104,KOLKATA,HyattRegency,LyttonHotel,HotelRockStar,TheStarCareer,TheTributeServices
