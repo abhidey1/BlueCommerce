@@ -237,7 +237,11 @@ var bbsWindow = "";
         	discount=offerdtls.getDiscount();
         	helplineno=offerdtls.getHelpline();
           }
-			String finalmsg="Dear "+cname+", you are getting offer from " +hotela+ " discount of" + discount + "%. Contact helpline number " +helplineno;
+          String finalmsg="Dear "+cname+", you are getting offer from " +hotela+ " discount of " + discount + "%.Contact helpline number " +helplineno;
+			
+			
+			BlueCommerceDao.updateFinalMessage(cardno,cmob,finalmsg);
+			
 			 efg.SendSMS(cmob,finalmsg);	 
 	    	  %>
 	    	  

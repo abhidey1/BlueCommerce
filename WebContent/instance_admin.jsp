@@ -192,10 +192,10 @@ if(err!=null){
                          <td>&nbsp;</td>             
                        <td valign="top" class="template"><strong>From Date </strong></td>
                        <td valign="top"><!-- <input type="text" name="misdate" /> -->
-                       <input id="demo1" name="misdate" type="text" size="10"><a href="javascript:NewCal('demo1','ddMMMyyyy')"><img src="calendar.gif" width="16" height="16" border="0" alt="Pick a date"></a></td>
+                       <input id="demo1" name="misdate" type="text" size="10"><a href="javascript:NewCal('demo1','ddMMyyyy')"><img src="calendar.gif" width="16" height="16" border="0" alt="Pick a date"></a></td>
                        
                        <td valign="top" class="template"><strong>To Date </strong></td>
-                       <td valign="top"><input id="demo2" name="todate" type="text" size="10"><a href="javascript:NewCal('demo2','ddMMMyyyy')"><img src="calendar.gif" width="16" height="16" border="0" alt="Pick a date"></a></td>
+                       <td valign="top"><input id="demo2" name="todate" type="text" size="10"><a href="javascript:NewCal('demo2','ddMMyyyy')"><img src="calendar.gif" width="16" height="16" border="0" alt="Pick a date"></a></td>
                      </tr>
                      
                      <tr>

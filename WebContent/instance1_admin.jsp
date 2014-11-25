@@ -15,6 +15,7 @@ if(loginname==null)
 <%@page import="com.model.ReadFileData"%>
 <%@page import="com.dao.BlueCommerceDao"%>
 <%@page import="com.model.Message"%>
+<%@page import="com.model.Customer"%>
 <%@page import="java.util.*"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
@@ -212,13 +213,13 @@ if(err!=null){
 String todate=request.getParameter("todate"); 
 if(fromdate !=null && todate!=null )
 {
-	 ArrayList<Message> list=BlueCommerceDao.getMisData(fromdate,todate);
+	 ArrayList<Customer> list=BlueCommerceDao.getMisData(fromdate,todate);
 	  session.setAttribute("offerdetails", list);
 	  
 	  if(list.isEmpty())
 	  {
-		  String message="No Record found for this date range!!! ";
-		 response.sendRedirect("instance.jsp?message="+message);
+		  String message="No Record found within this date range!!! ";
+		 response.sendRedirect("instance_admin.jsp?message="+message);
 		  //response.sendRedirect("instance.jsp");
 	  }
 
@@ -229,22 +230,23 @@ if(fromdate !=null && todate!=null )
  	
 	<tbody>
 		<tr>
-			<td style="width: 114px; text-align: center;"><strong>MIS ID</strong></td>
-			<td style="width: 149px; text-align: center;"><strong>CUSTOMER ID </strong></td>
-			<td style="width: 149px; text-align: center;"><strong>CUSTOMER MOBNO</strong></td>
-			<td style="width: 326px; text-align: center;"><strong>LAST TANSACTIONDATE</strong></td>
-			<td style="width: 190px; text-align: center;"><strong>DESCRIPTION</strong></td>
+			
+			<td style="width: 149px; text-align: center;"><strong>CUSTOMER NAME </strong></td>
+			<td style="width: 149px; text-align: center;"><strong>TRANSACTION DATE</strong></td>
+			<td style="width: 326px; text-align: center;"><strong>TRANSACTION AMOUNT</strong></td>
+			<td style="width: 190px; text-align: center;"><strong>TRANSACTION TYPE</strong></td>
+			<td style="width: 190px; text-align: center;"><strong>OFFER DETAILS</strong></td>
 			
 		</tr>
 		
-		<c:forEach var="message" items="${offerdetails}">  
+		<c:forEach var="customer" items="${offerdetails}">  
 		<tr>
 		
-			<td style="width: 114px; text-align: center;">${message.mis_id}</td>
-			<td style="width: 149px; text-align: center;">${message.customerid}</td>
-			<td style="width: 149px; text-align: center;">${message.customermob}</td>
-			<td style="width: 326px; text-align: justify;">${message.transactiondate}</td>
-			<td style="width: 190px; text-align: center;">${message.description}</td>
+			<td style="width: 114px; text-align: center;">${customer.customername}</td>
+			<td style="width: 149px; text-align: center;">${customer.transactiondate}</td>
+			<td style="width: 149px; text-align: center;">${customer.amount}</td>
+			<td style="width: 326px; text-align: justify;">${customer.transactiontype}</td>
+			<td style="width: 190px; text-align: center;">${customer.finalmessage}</td>
 			
 
 		</tr>

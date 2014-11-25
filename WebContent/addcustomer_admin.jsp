@@ -123,7 +123,7 @@ $('#dvLoading').fadeOut(2000);
                           <td valign="top"><input type="text" name="cname" /></td>
                    </tr>
                      <tr>
-                       <td valign="top" class="template"><strong>CUSTOMER MOBNO </strong></td>
+                       <td valign="top" class="template"><strong>CUSTOMER MOBNO (Add +91)</strong></td>
                        <td valign="top"><input type="text" name="cmob" /></td>
                      </tr>
                      <tr>

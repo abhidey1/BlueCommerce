@@ -1,5 +1,9 @@
 package com.model;
 
+/**
+ * @author ibm
+ *
+ */
 public class Customer {
 	
 	private String customerid;
@@ -13,6 +17,9 @@ public class Customer {
 	private String customercardno;
 	private String transaction_id;
 	private String amount;
+	private String transactiontype;
+	private String finalmessage;
+	
 	public String getCustomerid() {
 		return customerid;
 	}
@@ -78,6 +85,18 @@ public class Customer {
 	}
 	public void setAmount(String amount) {
 		this.amount = amount;
+	}
+	public String getTransactiontype() {
+		return transactiontype;
+	}
+	public void setTransactiontype(String transactiontype) {
+		this.transactiontype = transactiontype;
+	}
+	public String getFinalmessage() {
+		return finalmessage;
+	}
+	public void setFinalmessage(String finalmessage) {
+		this.finalmessage = finalmessage;
 	}
 	
 }

@@ -372,9 +372,12 @@ public class BlueCommerceDao {
 	}
 	
 	
-	public static ArrayList<Message> getMisData(String todate,String fromdate) {
+	public static ArrayList<Customer> getMisData(String todate,String fromdate) {
 
-		ArrayList<Message> misList = new ArrayList<Message>();
+		ArrayList<Customer> misList = new ArrayList<Customer>();
+		
+		System.out.println("TODATE====>" +todate);
+		System.out.println("FROMDATE====>" +fromdate);
 		
 /*		
 		SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
@@ -412,7 +415,7 @@ public class BlueCommerceDao {
 */
 		
 		
-		SimpleDateFormat formatter = new SimpleDateFormat("dd-MMM-yyyy");
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
 		Date to_date = null, from_date =null;
 		try {
 			 
@@ -437,27 +440,29 @@ public class BlueCommerceDao {
 
 			String sql = null;
 
-			String QueryString = "select * from DB2ADMIN.MIS_DETAILS where offer_date between '"+formatter.format(to_date)+"' and '"+formatter.format(from_date)+"'";
+			String QueryString = "select * from DB2ADMIN.TRANSACTION_DETAILS TD  join DB2ADMIN.CUSTOMER_DETAILS CD ON TD.TRANSACTION_ID=CD.TRANSACTION_ID where TRANSACTION_DATE between '"+formatter.format(to_date)+"' and '"+formatter.format(from_date)+"'";
 			System.out.println("Query==> "+QueryString);
 			rs = stmt.executeQuery(QueryString);
 
 			while (rs.next()) {
-				Message o = new Message();
+				Customer cust = new Customer();
 				
-				o.setMis_id(rs.getInt("mis_id"));
-				o.setCustomerid(rs.getInt("customer_id"));
-				o.setCustomermob(rs.getString("customer_mobno"));
-				o.setTransactiondate(rs.getString("transaction_date"));
-			//	o.setTransactiondate(rs.getDate("transaction_date").toString());
-				o.setDescription(rs.getString("message"));
+				cust.setCustomername(rs.getString("CUSTOMER_NAME"));
+				cust.setTransactiondate(rs.getString("TRANSACTION_DATE"));
+				cust.setAmount(rs.getString("TRANSACTION_AMOUNT"));
+				cust.setTransactiontype(rs.getString("TRANSACTION_TYPE"));
+				cust.setFinalmessage(rs.getString("FINAL_TRAN_MESSAGE"));
 				
-				misList.add(o);
+			
+				
+				misList.add(cust);
 			}
 		} catch (Exception e) {
 			System.out.println("unable to fetch records from db" + e);
 		}
 		return misList;
 	}
+	
 	
 	public static boolean addCustomer(String cname,String cmob,
 			String cemail, String cardtype, String cardno, String address, String cclass,String tamount,
@@ -533,6 +538,7 @@ public class BlueCommerceDao {
 			
 			
 			
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} catch (ClassNotFoundException e) {
@@ -548,6 +554,40 @@ public class BlueCommerceDao {
 			}
 		}
 		return true;
+	}
+	
+	public static void updateFinalMessage(String cardno,String cmob,String finalmsg)
+	{
+		
+		try {
+			
+			
+			con = ConnectionFactory.getInstance().getConnection();
+			stmt = con.createStatement();
+			String customer_id="";
+			String transaction_id="";
+			
+			ResultSet rs1 = null;
+			String QueryString1 = "select * from DB2ADMIN.CUSTOMER_DETAILS WHERE CUSTOMER_CARDNO='"+cardno+"' AND CUSTOMER_MOBNO='"+cmob+"' ";
+			System.out.println("Query==> "+QueryString1);
+			rs1 = stmt.executeQuery(QueryString1);
+
+			if (rs1.next()) {
+			customer_id=rs1.getString("CUSTOMER_ID");
+			transaction_id=rs1.getString("TRANSACTION_ID");
+			}
+			
+			String sql = null;
+			sql = "Update DB2ADMIN.TRANSACTION_DETAILS  set FINAL_TRAN_MESSAGE='" + finalmsg + "' where TRANSACTION_ID='"+transaction_id+"'";
+					
+			Statement stmtUpdate = con.createStatement();
+			stmtUpdate.executeUpdate(sql);
+			
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 	
 	

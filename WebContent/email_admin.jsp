@@ -200,28 +200,24 @@ String offmsg=request.getParameter("message");
 System.out.println(mobreceiver);
 System.out.println(offmsg);
 ReadFileData efg= new ReadFileData();
-//send email
-/* if(efg.sendEmail(recever,offmsg)==true)
+/* //send email
+if(efg.sendEmail(recever,offmsg)==true)
 {
 BlueCommerceDao.addMisDetails(customerid,customermobno,transactiondate,offmsg);
 	
- out.print ("Email has been sent successfully !");
+ out.print ("Your message has been sent successfully !");
 	}
 else
-	out.print ("Oops... Email not sent !!!");  */
-%>
-<br/> <br/>
-
-<% 
-//send SMS 
+	out.print ("oops message not sent!!!"); */ 
+//send SMS
 if(efg.SendSMS(mobreceiver,offmsg)==true)
 {
 BlueCommerceDao.addMisDetails(customerid,customermobno,transactiondate,offmsg);
 	
- out.print ("Message has been sent successfully !");
+ out.print ("Your message has been sent successfully !");
 	}
 else
-	out.print ("Oops... message not sent !!!"); 
+	out.print ("oops message not sent!!!"); 
  
   %>
 
